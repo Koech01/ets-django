@@ -2,7 +2,6 @@ from django.contrib.auth import authenticate, login
 from .forms import SignUpForm, EmailAuthenticationForm
 from django.shortcuts import redirect, render, redirect
 
-
 def login_view(request):
     if request.method == 'POST':
         form = EmailAuthenticationForm(request, request.POST)
@@ -29,3 +28,4 @@ def signUpView(request):
     else:
         form = SignUpForm()
     return render(request, 'authentication/signup.html', { 'form': form })
+
