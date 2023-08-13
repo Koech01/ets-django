@@ -125,12 +125,19 @@
     .loginBtn:hover .arrow { background: var(--secondary-color); }
     .loginBtn:hover .arrow:before { right: 0; }
 
-    .link{
-        color: #000000 !important;
-        font-size: 16px;
-        margin: 0px 0px 0px 65px;
+    .loginLinkDivs {
+        display: flex;
+        margin-left: 60px;
+        flex-direction: column;
     }
 
+    .link{
+        margin: 0px
+        padding: 0px;
+        font-size: 16px;
+        color: #000000 !important;
+    }
+    
     .link:hover {
         color: #000000 !important;
         text-decoration: underline;
@@ -153,7 +160,10 @@
                 Login<div class="arrow-wrapper"><div class="arrow"></div></div>
             </button>
         </form>
-        <a class="link" href="{% url 'signup' %}">Create an account</a>
+        <div class="loginLinkDivs">
+            <a class="link" href="{% url 'signup' %}">Create Account</a>
+            <a class="link"href="{% url 'password_reset' %}">Reset Password</a>
+        </div>
     </div>
 </div>
 {% endblock content %}
