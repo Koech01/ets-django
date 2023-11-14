@@ -87,8 +87,8 @@ def eventEditView(request, id):
 
     template = loader.get_template('events/eventEdit.html')
     context = {
-        'event'  : event,
-        'profile': profile,
-        'form'   : form,
+        'event'   : event,
+        'profile' : profile,
+        'form'    : form,
     }
     return HttpResponse(template.render(context, request))
